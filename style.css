@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./assets/pictures/bg-img.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding-top: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================MAIN======================== */
+.player-container {
+    max-width: 25rem;
+    height: 40rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* ___________track-picture-container___________ */
+.picture-container {
+    width: 22rem;
+    height: 22rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid rgba(207, 21, 21, 0.5);
+}
+
+.visualyzer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    width: 100%;
+    min-height: 100%;
+}
+
+.red-circle {
+    width: 10px;
+    min-height: 10px;
+    border: 3px solid rgba(207, 21, 21, 0.5);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* ___________player-controls-container___________*/
+.player-controls-container {
+    width: 20rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+/* ---progress-container */
+.progress-container {
+    width: 90%;
+    height: 10px;
+    border: 1px solid rgb(142, 139, 139);
+    cursor: pointer;
+    display: flex;
+}
+
+.filled-progress {
+    background: rgb(176, 0, 0);
+    width: 0%;
+    position: relative;
+    cursor: pointer;
+}
+
+.filled-progress::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    height: .9rem;
+    width: .3rem;
+    border: 1px outset black;
+    border-radius: 20%;
+    background: rgb(207, 5, 52);
+    cursor: pointer;
+}
+
+/* ---audio-time */
+.audio-time {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.track-current-time,
+.track-duration {
+    color: #4f4d4d;
+}
+
+/* ---audio-name*/
+.audio-name {
+    display: flex;
+    gap: 1vw;
+    font-size: 2rem;
+    font-family: 'BioRhyme', serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ---btns-container*/
+.btns-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.btn-prev,
+.btn-play,
+.btn-pause,
+.btn-next {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.btn-pause {
+    display: none;
+}
+
+/* ---volume-controls-container*/
+.volume-controls-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.btn-sound-control {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./assets/pictures/unmute.svg);
+}
+
+.mute {
+    background-image: url(./assets/pictures/mute.svg);
+}
+
+.volume-container {
+    width: 14rem;
+    height: 5px;
+    border: 1px solid rgb(142, 139, 139);
+    display: flex;
+    cursor: pointer;
+}
+
+.filled-volume {
+    background: rgb(224, 5, 56);
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.filled-volume::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    height: .5rem;
+    width: .3rem;
+    border: 1px outset black;
+    border-radius: 20%;
+    background: rgb(224, 5, 56);
+    cursor: pointer;
+}
+
+.btn-repeat {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./assets/pictures/repeat-btn.svg);
+}
+
+.repeat-on {
+    background-image: url(./assets/pictures/repeat-on.svg);
+}
+
+
+/* ========================FOOTER======================== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vw;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.rss {
+    width: 13vw;
+}
+
+.year {
+    font-size: 1.5vw;
+    color: #fff;
+    text-shadow: 1px 0 1px #000,
+        0 1px 1px #000,
+        -1px 0 1px #000,
+        0 -1px 1px #000;
+}
+
+.github {
+    width: 5vw;
+}
+
+/* ========================INTERACTIVITY======================== */
+.btn-prev,
+.btn-play,
+.btn-pause,
+.btn-next {
+    border-radius: 10%;
+}
+
+.github {
+    border-radius: 50%;
+}
+
+.btn-prev,
+.btn-play,
+.btn-pause,
+.btn-next,
+.btn-sound-control,
+.btn-repeat,
+.year,
+.github {
+    transition: transform .5s;
+}
+
+.btn-prev:hover,
+.btn-play:hover,
+.btn-pause:hover,
+.btn-next:hover,
+.btn-sound-control:hover,
+.btn-repeat:hover,
+.year:hover,
+.github:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.btn-prev:active,
+.btn-play:active,
+.btn-pause:active,
+.btn-next:active,
+.github:active {
+    box-shadow: 0px 1px 2px 0px rgba(207, 5, 52),
+        1px 2px 4px 0px rgba(207, 5, 52),
+        2px 4px 8px 0px rgba(207, 5, 52),
+        2px 4px 16px 0px rgba(207, 5, 52);
+
+}
+
+.btn-repeat:active {
+    margin-top: .1em;
+}
+
+
+.btn-sound-control:active {
+    border-radius: 20%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1) inset;
+}
+
+.year:active {
+    border-bottom: 3px dotted rgb(227, 38, 82);
+}
